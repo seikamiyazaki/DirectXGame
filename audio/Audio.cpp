@@ -164,20 +164,20 @@ uint32_t Audio::PlayWave(uint32_t soundDataHandle, bool loopFlag, float volume) 
 	voices_.insert(voice);
 
 	// 再生する波形データの設定
-	XAUDIO2_BUFFER buf{};
-	buf.pAudioData = soundData.pBuffer;
-	buf.pContext = voice;
-	buf.AudioBytes = soundData.bufferSize;
-	buf.Flags = XAUDIO2_END_OF_STREAM;
-	if (loopFlag) {
-		// 無限ループ
-		buf.LoopCount = XAUDIO2_LOOP_INFINITE;
-	}
+	//XAUDIO2_BUFFER buf{};
+	//buf.pAudioData = soundData.pBuffer;
+	//buf.pContext = voice;
+	//buf.AudioBytes = soundData.bufferSize;
+	//buf.Flags = XAUDIO2_END_OF_STREAM;
+	//if (loopFlag) {
+	//	// 無限ループ
+	//	buf.LoopCount = XAUDIO2_LOOP_INFINITE;
+	//}
 
-	// 波形データの再生
-	result = pSourceVoice->SubmitSourceBuffer(&buf);
-	pSourceVoice->SetVolume(volume);
-	result = pSourceVoice->Start();
+	//// 波形データの再生
+	//result = pSourceVoice->SubmitSourceBuffer(&buf);
+	//pSourceVoice->SetVolume(volume);
+	//result = pSourceVoice->Start();
 
 	indexVoice_++;
 

@@ -50,13 +50,15 @@ class GameScene {
 	uint32_t textureHandle_ = 0;// テクスチャハンドル
 	Sprite* sprite_ = nullptr;// スプライト
 	Model* model_ = nullptr;// 3Dモデル
-	WorldTransform worldTransform_;
+	WorldTransform worldTransform_[100];
 	ViewProjection viewProjection_;
 
 	uint32_t soundDataHandle_ = 0;// サウンドデータハンドル
 	uint32_t voiceHandle_ = 0;// 音声再生ハンドル
 
 	int32_t value_ = 0;// 値を表示したい変数
+
+	float viewAngle = 0.0f;//カメラ上方向の角度
 
 	/// <summary>
 	/// ゲームシーン用
